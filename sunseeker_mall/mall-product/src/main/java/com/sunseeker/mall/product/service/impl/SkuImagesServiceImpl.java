@@ -1,0 +1,36 @@
+package com.sunseeker.mall.product.service.impl;
+
+import com.sunseeker.common.utils.PageUtils;
+import com.sunseeker.common.utils.Query;
+import com.sunseeker.mall.product.dao.SkuImagesDao;
+import com.sunseeker.mall.product.entity.SkuImagesEntity;
+import com.sunseeker.mall.product.service.SkuImagesService;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.Map;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+
+
+@Service("skuImagesService")
+public class SkuImagesServiceImpl extends ServiceImpl<SkuImagesDao, SkuImagesEntity> implements SkuImagesService {
+
+    @Override
+    public PageUtils queryPage(Map<String, Object> params) {
+        IPage<SkuImagesEntity> page = this.page(
+                new Query<SkuImagesEntity>().getPage(params),
+                new QueryWrapper<>()
+        );
+
+        return new PageUtils(page);
+    }
+
+    @Override
+    public List<SkuImagesEntity> getImagesBySkuId(Long skuId) {
+
+        return baseMapper.selectList(new QueryWrapper<SkuImagesEntity>().eq("sku_id", skuId));
+    }
+
+}

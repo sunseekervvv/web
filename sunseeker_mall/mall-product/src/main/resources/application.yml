@@ -1,0 +1,56 @@
+spring:
+  datasource:
+    username: vivvivvv
+    password: Vivivi201206
+    url: jdbc:mysql://rm-bp165rp2q1i9a9kyuio.mysql.rds.aliyuncs.com:3306/mall_pms?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  cloud:
+    nacos:
+      discovery:
+#        server-addr: 172.28.172.116:8848
+        server-addr: 127.0.0.1:8848
+    alicloud:
+      access-key: LTAI5tFJLFw3mka2KBfU9br7
+      secret-key: BD9SYzDZWtSpWEP1pXh8uoQz8chiaI
+      oss:
+        endpoint: oss-cn-beijing.aliyuncs.com
+  application:
+    name: mall-product
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+  redis:
+    host: r-bp1ce2df5bd99b44pd.redis.rds.aliyuncs.com
+    port: 6379
+    password: Sunseeker123456
+  cache:
+    type: redis
+    redis:
+      time-to-live: 360000000
+  thymeleaf:
+    cache: false
+
+  mvc:
+    static-path-pattern: /static/**
+  resources:
+    static-locations: classpath:/static/
+#    static-locations: classpath:/static/
+#      use-key-prefix: true
+#      key-prefix: CACHE_
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/**/*.xml
+  global-config:
+    db-config:
+      id-type: auto
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+server:
+  port: 10000
+logging:
+  level:
+    com.sunseeker.mall: error
+mall:
+  thread:
+    corePoolSize: 10
+    maxPoolSize: 20
+    keepAliveTime: 300

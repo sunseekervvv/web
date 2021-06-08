@@ -1,0 +1,25 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 172.28.172.116:8848
+  application:
+    name: mall-cart
+  redis:
+    host: r-bp1ce2df5bd99b44pd.redis.rds.aliyuncs.com
+    port: 6379
+    password: Sunseeker123456
+  session:
+    store-type: redis
+    timeout: 30m
+
+# 自定义线程池参数
+mall:
+  thread:
+    corePoolSize: 10
+    maxPoolSize: 20
+    keepAliveTime: 300
+
+server:
+  port: 18001
+

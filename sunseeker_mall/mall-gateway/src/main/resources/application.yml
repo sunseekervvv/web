@@ -1,0 +1,77 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: seller_route
+          uri: lb://mall-seller
+          predicates:
+            - Path=/api/seller/**
+          filters:
+            - RewritePath=/api/(?<segment>.*),/$\{segment}
+        - id: product_route
+          uri: lb://mall-product
+          predicates:
+            - Path=/api/product/**
+          filters:
+            - RewritePath=/api/(?<segment>.*),/$\{segment}
+        - id: order_route
+          uri: lb://mall-order
+          predicates:
+            - Path=/api/order/**
+          filters:
+            - RewritePath=/api/(?<segment>.*),/$\{segment}
+        - id: third_party_route
+          uri: lb://mall-third-party
+          predicates:
+            - Path=/api/thirdparty/**
+          filters:
+            - RewritePath=/api/thirdparty/(?<segment>.*),/$\{segment}
+        - id: member_route
+          uri: lb://mall-member
+          predicates:
+            - Path=/api/member/**
+          filters:
+            - RewritePath=/api/(?<segment>.*),/$\{segment}
+        - id: ware_route
+          uri: lb://mall-ware
+          predicates:
+            - Path=/api/ware/**
+          filters:
+            - RewritePath=/api/(?<segment>.*),/$\{segment}
+        - id: search_route
+          uri: lb://mall-search
+          predicates:
+            - Path=/api/search/**
+          filters:
+            - RewritePath=/api/(?<segment>.*),/$\{segment}
+        - id: auth_route
+          uri: lb://mall-auth
+          predicates:
+            - Path=/api/auth/**
+          filters:
+            - RewritePath=/api/(?<segment>.*),/$\{segment}
+        - id: cart_route
+          uri: lb://mall-cart
+          predicates:
+            - Path=/api/cart/**
+          filters:
+            - RewritePath=/api/(?<segment>.*),/$\{segment}
+        - id: admin_route
+          uri: lb://mall-admin
+          predicates:
+            - Path=/api/**
+          filters:
+            - RewritePath=/api/(?<segment>.*),/renren-fast/$\{segment}
+
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+
+  application:
+    name: mall-gateway
+server:
+  port: 89
+#  ssl:
+#    key-store-type: JKS
+#    key-store: classpath:xdu-mall.store.jks
+#    key-password: 6y9ql0n1og

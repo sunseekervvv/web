@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.sunseeker.mall</groupId>
+    <artifactId>mall</artifactId>
+    <version>Release4</version>
+    <name>mall</name>
+    <description>聚合服务</description>
+    <packaging>pom</packaging>
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+    </properties>
+
+    <modules>
+        <module>mall-coupon</module>
+        <module>mall-member</module>
+        <module>mall-order</module>
+        <module>mall-product</module>
+        <module>mall-ware</module>
+        <module>mall-common</module>
+        <module>mall-gateway</module>
+        <module>mall-third-party</module>
+        <module>mall-search</module>
+        <module>mall-auth</module>
+        <module>mall-cart</module>
+        <module>mall-admin</module>
+        <module>mall-seller</module>
+
+    </modules>
+
+</project>
