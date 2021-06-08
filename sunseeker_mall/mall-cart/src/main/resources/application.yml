@@ -2,13 +2,13 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 172.28.172.116:8848
+        server-addr: 
   application:
     name: mall-cart
   redis:
-    host: r-bp1ce2df5bd99b44pd.redis.rds.aliyuncs.com
+    host: 
     port: 6379
-    password: Sunseeker123456
+    password: 
   session:
     store-type: redis
     timeout: 30m
