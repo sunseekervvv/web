@@ -1,14 +1,13 @@
 spring:
   datasource:
-    username: vivvivvv
-    password: Vivivi201206
-    url: jdbc:mysql://rm-bp165rp2q1i9a9kyuio.mysql.rds.aliyuncs.com:3306/mall_oms?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: 
+    password: 
+    url: 
     driver-class-name: com.mysql.cj.jdbc.Driver
   cloud:
     nacos:
       discovery:
-#        server-addr: 172.28.172.116:8848
-        server-addr: 127.0.0.1:8848
+        server-addr: 
   application:
     name: mall-order
   redis:
@@ -19,9 +18,9 @@ spring:
     store-type: redis
     timeout: 30m
   rabbitmq:
-    host: amqp-cn-2r426h1re00l.mq-amqp.cn-hangzhou-249959-a.aliyuncs.com
-    username: MjphbXFwLWNuLTJyNDI2aDFyZTAwbDpMVEFJNXRMeUVMZXhMcG1TQWRkM1RRZnc=
-    password: OUQ3RTdBODE4MEFDMDA3MkQ4MzdCRjA0NTY5MzNDRUFDQzZGOEUxQzoxNjIyNTU5MDkxNzA3
+    host: 
+    username: 
+    password: 
     listener:
       simple:
         acknowledge-mode: manual
