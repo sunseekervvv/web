@@ -28,10 +28,10 @@ public class MallElasticSearchConfiguration {
 
         final CredentialsProvider credentialsProvider = new BasicCredentialsProvider();
         credentialsProvider.setCredentials(AuthScope.ANY,
-                new UsernamePasswordCredentials("elastic","Sunseeker123456"));
+                new UsernamePasswordCredentials("用户名","密码"));
 
         RestClientBuilder builder = RestClient.builder(
-                new HttpHost("es-0c8obkjf.public.tencentelasticsearch.com", 9200,"https"))
+                new HttpHost("URI", 9200,"https"))
                 .setHttpClientConfigCallback(httpAsyncClientBuilder -> httpAsyncClientBuilder.setDefaultCredentialsProvider(credentialsProvider));
 
         return new RestHighLevelClient(builder);
