@@ -65,7 +65,7 @@ spring:
 
     nacos:
       discovery:
-        server-addr: 127.0.0.1:8848
+        server-addr: 
 
   application:
     name: mall-gateway
@@ -74,4 +74,4 @@ server:
 #  ssl:
 #    key-store-type: JKS
 #    key-store: classpath:xdu-mall.store.jks
-#    key-password: 6y9ql0n1og
+#    key-password: 
