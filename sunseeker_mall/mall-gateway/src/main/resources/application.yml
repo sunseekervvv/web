@@ -65,7 +65,7 @@ spring:
 
     nacos:
       discovery:
-        server-addr: 
+        server-addr:  
 
   application:
     name: mall-gateway
