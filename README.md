@@ -1,3 +1,4 @@
+作业完成情况详见Wiki
 # web
 ## 组队信息
 
@@ -17,7 +18,6 @@
 + mall-front: 用户前端
 + mall-managent: 管理员，卖家前端
 + sunseeker_mall: 后端系统
-+ project_tasks: 作业完成情况
 
 PS：详情请见各模块内md
 ## 其他
